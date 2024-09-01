@@ -101,8 +101,6 @@ def aiquest_create(request):
 
         return HttpResponse(jsonMsg, content_type='application/json')
 
-
-
 @csrf_exempt
 def student_create(request):
     if request.method == 'POST':
