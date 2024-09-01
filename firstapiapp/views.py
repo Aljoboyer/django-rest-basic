@@ -81,6 +81,26 @@ def aiquest_create(request):
         
         json_data = JSONRenderer().render(serializer.errors)
         return HttpResponse(json_data, content_type='application/sjon')
+    
+    if request.method == 'DELETE':
+        json_data = request.body
+
+        stream = io.BytesIO(json_data)
+
+        pythonData = JSONParser().parse(stream)
+
+        id = pythonData.get('id')
+
+        aiqDlt = Aiquest.objects.get(id = id)
+
+        aiqDlt.delete()
+
+        res = {'msg': 'Successfully Deleted Data'}
+
+        jsonMsg = JSONRenderer().render(res)
+
+        return HttpResponse(jsonMsg, content_type='application/json')
+
 
 
 @csrf_exempt
