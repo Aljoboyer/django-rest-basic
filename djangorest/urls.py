@@ -22,5 +22,6 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('aiquest/', include('firstapiapp.urls')),
     path('shop/', include('secondapiapp.urls')),
+    path('apiview/', include('apiviewapp.urls')),
 
 ]
