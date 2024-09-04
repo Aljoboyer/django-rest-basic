@@ -16,3 +16,16 @@ def Allmovies(request):
     serializer = MovieSerializer(ai, many = True)
 
     return Response(serializer.data)
+
+@api_view(['POST'])
+def Create_Movie(request):
+    
+    serializer = MovieSerializer(data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        res = {'msg': 'Successfully Insert Done'}
+
+        return Response(res)
+    
+    return Response(serializer.errors)
