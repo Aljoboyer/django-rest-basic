@@ -23,5 +23,6 @@ urlpatterns = [
     path('aiquest/', include('firstapiapp.urls')),
     path('shop/', include('secondapiapp.urls')),
     path('apiview/', include('apiviewapp.urls')),
+    path('classapiview/', include('classapiview.urls')),
 
 ]
