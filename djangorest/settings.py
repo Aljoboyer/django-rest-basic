@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'firstapiapp',
     'secondapiapp',
     'apiviewapp',
-    'classapiview'
+    'classapiview',
+    'mixinapp',
 ]
 
 MIDDLEWARE = [
