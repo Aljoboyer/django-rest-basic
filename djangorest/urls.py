@@ -24,5 +24,6 @@ urlpatterns = [
     path('shop/', include('secondapiapp.urls')),
     path('apiview/', include('apiviewapp.urls')),
     path('classapiview/', include('classapiview.urls')),
+    path('mixin/', include('mixinapp.urls')),
 
 ]
